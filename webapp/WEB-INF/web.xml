@@ -1,40 +1,7 @@
-<plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.1</version>
-                <configuration>
-                    <server>myserver</server>
-                    <url>http://192.168.1.204:8080/manager</url>
-                    <username>rishi</username>
-                    <password>rishi</password>
-                    <path>/EmployeeApplication</path>
-                </configuration>
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-
-                <executions>
-                    <execution>
-                        <id>start-tomcat</id>
-                        <phase>pre-integration-test</phase>
-                        <goals>
-
-
-                            <goal>deploy</goal>
-                        </goals>
-                        <configuration>
-                            <fork>true</fork>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>stop-tomcat</id>
-                        <phase>post-integration-test</phase>
-                        <goals>
-                            <goal>shutdown</goal>
-                        </goals>
-                    </execution>
-
-
-
-                </executions>
-            </plugin>
- 
-
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+</web-app>
