@@ -3,14 +3,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
- 
-  <groupId>org.codehaus.mojo</groupId>
-  <artifactId>my-project</artifactId>
-  <version>1.0</version>
+ <groupId>com.example.projects</groupId>
+  <artifactId>documentedproject</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>WebApp Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+  <name>Documented Project</name>
+  <url>http://example.com</url>
   <build>
     <finalName>WebApp</finalName>
   </build>
