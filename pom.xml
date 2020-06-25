@@ -8,6 +8,7 @@
                     <username>rishi</username>
                     <password>rishi</password>
                     <path>/EmployeeApplication</path>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
 
 
