@@ -1,4 +1,6 @@
-<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
   <groupId>lu.amazon.aws.demo</groupId>
   <artifactId>WebApp</artifactId>
   <packaging>war</packaging>
@@ -13,18 +15,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-<configuration>
-    <container>
-        <containerId>tomcat8x</containerId>
-        <type>remote</type>
-    </container>
-    <configuration>
-        <type>runtime</type>
-        <properties>
-            <cargo.remote.username>rishi</cargo.remote.username>
-            <cargo.remote.password>rishi</cargo.remote.password>
-            <cargo.tomcat.manager.url>http://192.168.1.204:8080/manager/text
-              </cargo.tomcat.manager.url>
-        </properties>
-    </configuration>
-</configuration>
+  <build>
+    <finalName>WebApp</finalName>
+  </build>
+</project>
