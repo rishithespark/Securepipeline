@@ -21,7 +21,7 @@ pipeline {
     }
     stage ('Buid-deploy'){
       steps {
-        sh sh 'rm index.jsp'
+        sh 'rm index.jsp'
                 sh 'wget https://github.com/rishithespark/securepipeline/blob/master/src/main/webapp/index.jsp'
       }
     }
