@@ -22,7 +22,9 @@ pipeline {
     stage ('Deploy-To-Tomcat') {
             steps {
            sshagent(['tomcat']) {
-                sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@192.168.1.205:/prod/tomcat/apache-tomcat-8.5.56/webapps/webapp.war'
+                sh 'rm index.jsp'
+                sh 'wget https://github.com/rishithespark/securepipeline/blob/master/src/main/webapp/index.jsp'
+                sh 'cat index.jsp'
               }     
            }       
               }      
