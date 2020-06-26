@@ -21,7 +21,7 @@ pipeline {
     }
     stage ('Buid-deploy'){
       steps {
-        sh 'rm /home/ubuntu/index.jsp'
+        sh 'sudo rm /home/ubuntu/index.jsp'
         sh 'wget https://github.com/rishithespark/securepipeline/blob/master/src/main/webapp/index.jsp'
       }
     }
