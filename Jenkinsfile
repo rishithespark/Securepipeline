@@ -21,7 +21,8 @@ pipeline {
     }
     stage ('Deploy'){
       steps{
-        sh 'sudo scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/webapp-pipeline/target/JenkinsWar.war   ubuntu@192.168.1.206:/home/ubuntu/prod/apache-tomcat-8.5.56/webapps/'
+        sh 'ssh ubuntu@192.168.1.206'
+        sh 'ifconfig'
       }
     }
       
