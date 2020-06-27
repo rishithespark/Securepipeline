@@ -19,13 +19,12 @@ pipeline {
       sh 'mvn clean package'
        }
     }
-    
-   stage ('Deploy-To-Tomcat') {
-            steps {
-           sshagent(['tomcat']) {
-                sh 'sudo scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/webapp-pipeline/target/JenkinsWar.war   ubuntu@192.168.1.206:/home/ubuntu/prod/apache-tomcat-8.5.56/webapps/'
-              }      
-           }       
+    stage ('Deploy'){
+      steps{
+        sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/webapp-pipeline/target/JenkinsWar.war   ubuntu@192.168.1.206:/home/ubuntu/prod/apache-tomcat-8.5.56/webapps/'
+      }
+    }
+      
     }
     
         
