@@ -21,6 +21,7 @@ pipeline {
     }
     stage ('Deploy'){
       steps{
+       sshagent(['tomcat2']) {
         sh 'ssh ubuntu@192.168.1.206'
         sh 'ifconfig'
       }
