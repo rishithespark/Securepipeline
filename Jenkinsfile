@@ -17,9 +17,9 @@ pipeline {
       steps {
          sh 'sudo rm -rf securepipeline'
          sh 'git clone "https://github.com/rishithespark/securepipeline.git"'
-         sh 'chmod +x /home/ubuntu/securepipeline/owasp-dependency-check.sh'
+         sh 'sudo chmod +x /home/ubuntu/securepipeline/owasp-dependency-check.sh'
          sh 'sudo bash /home/ubuntu/securepipeline/owasp-dependency-check.sh'
-         sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
+         sh 'sudo cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
         
       }
     }
