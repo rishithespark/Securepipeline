@@ -21,8 +21,8 @@ pipeline {
     }
     stage ('Deploy'){
       steps{
-       sshagent(['tomcat2']) {
-        sh 'ssh ubuntu@192.168.1.206'
+      
+        sh ' 'cp /var/lib/jenkins/workspace/webapp-pipeline/target/JenkinsWar/index.jsp      /home/ubuntu/prod/apache-tomcat-8.5.56/webapps/manager/index.jsp'
         sh 'ifconfig'
       }
     }
