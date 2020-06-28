@@ -12,13 +12,7 @@ pipeline {
             ''' 
       }
     }
-     stage ('Check-Git-Secrets') {
-      steps {
-        sh 'rm trufflehog || true'
-        sh 'sudo docker run gesellix/trufflehog --json  https://github.com/rishithespark/securepipeline.git > trufflehog'
-        sh 'cat trufflehog'
-      }
-    }
+
       stage ('Source Composition Analysis') {
       steps {
          sh 'sudo rm -rf securepipeline'
