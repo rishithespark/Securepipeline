@@ -12,9 +12,16 @@ pipeline {
             ''' 
       }
     }
-
-      stage ('Source Composition Analysis') {
+     stage ('Check-Git-Secrets') {
       steps {
+        sh 'rm trufflehog || true'
+        sh 'sudo docker run gesellix/trufflehog --json  https://github.com/rishithespark/securepipeline.git > trufflehog'
+        sh 'cat trufflehog'
+      }
+    }
+      
+      stage ('Source Composition Analysis') {
+       steps {
          sh 'sudo rm -rf securepipeline'
          sh 'git clone "https://github.com/rishithespark/securepipeline.git"'
          sh 'sudo chmod +x /home/ubuntu/securepipeline/owasp-dependency-check.sh'
