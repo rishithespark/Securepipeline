@@ -22,7 +22,7 @@ pipeline {
     stage ('Deploy'){
       steps{
       
-        sh ' mv /var/lib/jenkins/workspace/webapp-pipeline/target/JenkinsWar/index.jsp      /home/ubuntu/prod/apache-tomcat-8.5.56/webapps/manager/index.jsp'
+        sh 'sudo cp /var/lib/jenkins/workspace/webapp-pipeline/target/JenkinsWar/index.jsp      /home/ubuntu/prod/apache-tomcat-8.5.56/webapps/manager/index.jsp'
       }
       }
     }
