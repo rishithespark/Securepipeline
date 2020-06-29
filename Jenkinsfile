@@ -47,7 +47,7 @@ pipeline {
     stage ('Deploy'){
       steps{
       
-        sh 'sudo cp /var/lib/jenkins/workspace/webapp-pipeline/target/JenkinsWar/index.jsp      /home/ubuntu/prod/apache-tomcat-8.5.56/webapps/ROOT/index.jsp'
+        sh 'sudo cp /var/lib/jenkins/workspace/webapp-pipeline/target/securepipeline/index.jsp      /home/ubuntu/prod/apache-tomcat-8.5.56/webapps/ROOT/index.jsp'
       }
       }
     }
