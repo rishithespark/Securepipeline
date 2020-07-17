@@ -25,17 +25,14 @@ pipeline {
          sh 'sudo rm -rf securepipeline'
          sh 'git clone "https://github.com/rishithespark/securepipeline.git"'
          sh 'sudo chmod +x /home/ubuntu/securepipeline/owasp-dependency-check.sh'
-         sh 'sudo bash /home/ubuntu/securepipeline/owasp-dependency-check.sh'
+         sh 'sudo bash /home/ubuntu/securepipeline/owasp-dependency-check.sh     /home/ubuntu/securepipeline'
         
         
       }
     }
      
     
-    stage ('Build') {
-      steps {
-      sh 'mvn clean package'
-       }
+
     }
     stage ('Deploy'){
       steps{
